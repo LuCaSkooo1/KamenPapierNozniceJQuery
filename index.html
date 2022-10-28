@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>✊🏽✋🏽✌🏽</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>ROCK PAPER SCISSORS</h1>
+			<h2>Your Name:</h2>
+			<div id="usernameChange"></div>
+			<div class="inputWrapper">
+				<input
+					type="text"
+					placeholder="username"
+					id="nameInput"
+					disabled
+				/>
+				<button class="saveBtn">SAVE</button>
+			</div>
+
+			<button onclick="openModal()" class="startBtn">START</button>
+			<div class="data">
+				<div class="scoreBoard">
+					<h2 id="userScore">username : 0</h2>
+					<h2 id="botScore">BOT : 0</h2>
+				</div>
+				<div class="gameHistory">
+					<h2>History:</h2>
+				</div>
+			</div>
+			<div id="modal">
+				<div class="closeBtn"><div id="close" /></div>
+				<h1>Choose Object</h1>
+				<div class="objects">
+					<button class="objectBtn">ROCK</button>
+					<button class="objectBtn">PAPER</button>
+					<button class="objectBtn">SCISSORS</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
