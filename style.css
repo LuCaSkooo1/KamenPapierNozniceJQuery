@@ -142,7 +142,9 @@ input {
 	align-items: center;
 }
 
-.objectBtn {
+#objectBtn1,
+#objectBtn2,
+#objectBtn3 {
 	margin-top: 10vh;
 	margin-left: 5vw;
 	width: 200px;
@@ -159,7 +161,9 @@ input {
 	animation-duration: 3000ms;
 	animation-iteration-count: infinite;
 }
-.objectBtn:hover {
+#objectBtn1:hover,
+#objectBtn2:hover,
+#objectBtn3:hover {
 	background-color: #fff;
 	color: #121212;
 }
