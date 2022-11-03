@@ -87,8 +87,16 @@ input {
 	background-color: #121212;
 	border: solid 5px #fff;
 }
+#resultModal {
+	display: none;
+	position: absolute;
+	width: 60vw;
+	height: 50vh;
+	background-color: #121212;
+	border: solid 5px #fff;
+}
 
-#close {
+.crossIcon {
 	position: absolute;
 	right: 32px;
 	top: 32px;
@@ -96,11 +104,11 @@ input {
 	height: 32px;
 	opacity: 1;
 }
-#close:hover {
+.crossIcon:hover {
 	transform: scale(1.1);
 }
-#close:before,
-#close:after {
+.crossIcon:before,
+.crossIcon:after {
 	position: absolute;
 	left: 15px;
 	content: " ";
@@ -108,10 +116,10 @@ input {
 	width: 2px;
 	background-color: rgb(255, 255, 255);
 }
-#close:before {
+.crossIcon:before {
 	transform: rotate(45deg);
 }
-#close:after {
+.crossIcon:after {
 	transform: rotate(-45deg);
 }
 
@@ -142,9 +150,7 @@ input {
 	align-items: center;
 }
 
-#objectBtn1,
-#objectBtn2,
-#objectBtn3 {
+.objectBtns {
 	margin-top: 10vh;
 	margin-left: 5vw;
 	width: 200px;
@@ -161,9 +167,7 @@ input {
 	animation-duration: 3000ms;
 	animation-iteration-count: infinite;
 }
-#objectBtn1:hover,
-#objectBtn2:hover,
-#objectBtn3:hover {
+.objectBtns:hover {
 	background-color: #fff;
 	color: #121212;
 }

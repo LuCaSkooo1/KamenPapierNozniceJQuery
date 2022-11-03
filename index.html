@@ -13,7 +13,7 @@
 		<div class="container">
 			<h1>ROCK PAPER SCISSORS</h1>
 			<h2>Your Name:</h2>
-			<div id="usernameChange"></div>
+			<div id="usernameChange" onclick="Game.usernameChange()"></div>
 			<div class="inputWrapper">
 				<input
 					type="text"
@@ -21,26 +21,65 @@
 					id="nameInput"
 					disabled
 				/>
-				<button class="saveBtn">SAVE</button>
+				<button class="saveBtn" onclick="Game.usernameSave()">
+					SAVE
+				</button>
 			</div>
 
-			<button onclick="openModal()" class="startBtn">START</button>
+			<button class="startBtn" onclick="Game.gameStart()">START</button>
 			<div class="data">
 				<div class="scoreBoard">
-					<h2 id="userScore">username : 0</h2>
+					<h2 id="userScore">
+						username : <span id="usrScore">0</span>
+					</h2>
 					<h2 id="botScore">BOT : 0</h2>
 				</div>
 				<div class="gameHistory">
 					<h2>History:</h2>
 				</div>
 			</div>
+			<div id="resultModal">
+				<div class="closeBtn">
+					<div
+						class="crossIcon"
+						id="close2"
+						onclick="Game.resultClose()"
+					></div>
+				</div>
+				<h1 id="resultMsg">"result"</h1>
+				<h2 id="happening"></h2>
+			</div>
 			<div id="modal">
-				<div class="closeBtn"><div id="close" /></div>
+				<div class="closeBtn">
+					<div
+						id="close"
+						class="crossIcon"
+						onclick="Game.gameClose()"
+					/>
+				</div>
 				<h1>Choose Object</h1>
 				<div class="objects">
-					<button id="objectBtn1">ROCK</button>
-					<button id="objectBtn2">PAPER</button>
-					<button id="objectBtn3">SCISSORS</button>
+					<button
+						id="objectBtn1"
+						class="objectBtns"
+						onclick="Game.rockPick()"
+					>
+						ROCK
+					</button>
+					<button
+						id="objectBtn2"
+						class="objectBtns"
+						onclick="Game.paperPick()"
+					>
+						PAPER
+					</button>
+					<button
+						id="objectBtn3"
+						class="objectBtns"
+						onclick="Game.scissorsPick()"
+					>
+						SCISSORS
+					</button>
 				</div>
 			</div>
 		</div>
