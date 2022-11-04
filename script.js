@@ -1,6 +1,8 @@
 let username = "username"
-let userPoints = 0
+let computerPoints = 0
 let result = ""
+let userPoints = 0
+let round = 1
 
 class game {
 	computerChoice() {
@@ -51,24 +53,36 @@ class game {
 			if (opponent === "kamen") {
 				return "Remíza"
 			} else if (opponent === "papier") {
+				computerPoints++
+				$("#botScore").text(`BOT : ${computerPoints}`)
 				return "Prehral si!"
 			} else if (opponent === "noznice") {
+				userPoints++
+				$("#userScore").text(`${username} : ${userPoints}`)
 				return "Vyhral si!"
 			}
 		} else if (me === "papier") {
 			if (opponent === "papier") {
 				return "Remíza"
 			} else if (opponent === "kamen") {
+				userPoints++
+				$("#userScore").text(`${username} : ${userPoints}`)
 				return "Vyhral si!"
 			} else if (opponent === "noznice") {
+				computerPoints++
+				$("#botScore").text(`BOT : ${computerPoints}`)
 				return "Prehral si!"
 			}
 		} else if (me === "noznice") {
 			if (opponent === "noznice") {
 				return "Remíza"
 			} else if (opponent === "papier") {
+				userPoints++
+				$("#userScore").text(`${username} : ${userPoints}`)
 				return "Vyhral si!"
 			} else if (opponent === "kamen") {
+				computerPoints++
+				$("#botScore").text(`BOT : ${computerPoints}`)
 				return "Prehral si!"
 			}
 		}
@@ -79,6 +93,9 @@ class game {
 	}
 	resultClose() {
 		$("#resultModal").hide()
+		var lastRound = result
+		var html = "<li><span>" + "kolo: " + lastRound + "</span></li>"
+		$(".historyText").append(html)
 	}
 
 	usernameChange() {
