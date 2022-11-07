@@ -93,8 +93,8 @@ class game {
 	}
 	resultClose() {
 		$("#resultModal").hide()
-		var lastRound = result
-		var html = "<li><span>" + "kolo: " + lastRound + "</span></li>"
+		let lastRound = result
+		let html = "<li><span>" + "kolo: " + lastRound + "</span></li>"
 		$(".historyText").append(html)
 	}
 
